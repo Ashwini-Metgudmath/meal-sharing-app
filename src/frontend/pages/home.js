@@ -1,8 +1,19 @@
 homeRequest = () => {
   const htmlContent = `
+  <div>
+  <div class="page-header" style="background-image:url(images/homepage-background.jpg); height: 500px; background-size: cover; ">
+  </div>
   <main class="container">
     <section id="root"></section>
 </main>
+<footer id="footer" class="page-footer font-small mdb-color lighten-3 pt-4">
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> ash@gmail.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<div>
   `;
  
   function fetchJsonUrl(url) {
@@ -23,7 +34,8 @@ homeRequest = () => {
       const mealDataCopy = Object.assign({}, meal);
             mealDataCopy.review = reviews.filter(review => review.meal_id === meal.id)
             const div = document.createElement('div');
-				div.classList.add('card');
+            div.classList.add('card');
+   
 			
             let starTotal = 5;
             let ratings;
@@ -50,7 +62,7 @@ homeRequest = () => {
     div.innerHTML =`
     <img class="card-img-top" src="${meal.image}" alt="mealImg">
     <h3 class="card-title">${meal.title}</h3>
-    <p class="card-text">${meal.description}</p>
+    <p class="card-body">${meal.description}</p>
     <div class="stars-outer">
     <span class="number-rating">rating: ${ratings}</span>
     </div>
@@ -58,7 +70,7 @@ homeRequest = () => {
     <span class="mealIconText"><i class="fas fa-map-marker-alt"></i>${meal.location}</span>
     <span class="mealIconText"><i class="fas fa-money-bill-wave"></i>${parseInt(meal.price).toFixed(2)}Dkk</span>
     </p>
-   <a href="meal/${meal.id}" data-navigo class=" btn btn-primary">Reserve</a>
+   <a href="meal/${meal.id}" data-navigo class="btn btn-info">Reserve</a>
     `
     root.appendChild(div);
     });

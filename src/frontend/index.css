@@ -26,6 +26,27 @@ header > h1 {
     text-align: center;
 }
 
+.navbar {
+    z-index: 1040;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.side-nav {
+margin-top: 45px !important;
+}
+
+.double-nav .breadcrumb-dn p {
+  color: #fff;
+}
+
+@media (min-width: 1200px){
+.fixed-sn main {
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+}
+}
+
 
 div.container.logoNav {
     display: flex;
@@ -92,6 +113,12 @@ div.container.logoNav {
     display: flex;
     justify-content: space-around;
 
+}
+
+.page-header{
+    box-shadow: 7px 10px 10px #000;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .homePageImg{
@@ -170,7 +197,7 @@ div.container.logoNav {
     color: rgb(12, 100, 12);  
  }
 
- .btn-primary {
+ /* .btn-primary {
      background-color: rgb(12, 100, 12);
      border-color: rgb(12, 100, 12);
      color: white;
@@ -189,7 +216,10 @@ div.container.logoNav {
     width: 110px;
     font-size: 16px;
     padding: 1%;
- }
+ } */
+
+
+
 
  .btn-primary:hover {
     background-color: rgb(12, 100, 12);
@@ -208,6 +238,7 @@ div.container.logoNav {
     background-color: rgb(12, 100, 12);
     border-color: rgb(12, 100, 12);
  }
+
 
  .formAlignment {
      display: flex;
