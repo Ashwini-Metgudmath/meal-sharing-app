@@ -1,2 +1,2 @@
 # Meal-sharing-app
-JavaScript and Node.js application
+Fullstack application with JavaScript frontend and Node.js backend APIs
